@@ -12,7 +12,7 @@ Future<Database> _getDatabase() async {
     path.join(dbPath, 'places.db'),
     onCreate: (db, version) {
       return db.execute(
-        'CREATE TABLE user_places(id TEXT PRIMARY KEY, title TEXT ,image TEXT, lat REAL, lng REAL,address TEXT)',
+        'CREATE TABLE user_places(id TEXT PRIMARY KEY, title TEXT ,image TEXT)',
       );
     },
     version: 1,
