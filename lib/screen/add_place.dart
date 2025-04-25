@@ -47,11 +47,6 @@ class _AddPlaceState extends ConsumerState<AddPlace> {
             const SizedBox(height: 12),
             ImageInput(onPickImage: (image) => _selectImage = image),
             const SizedBox(height: 12),
-            // LocationInput(
-            //   onSelectLocation: (location) {
-            //     _selectedLocation = location;
-            //   },
-            // ),
             const SizedBox(height: 16),
             ElevatedButton.icon(
               icon: const Icon(Icons.add),

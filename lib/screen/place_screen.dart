@@ -24,7 +24,7 @@ class _PlaceScreenState extends ConsumerState<PlaceScreen> {
     final userPlace = ref.watch(placeProvider);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Place'),
+        title: const Text('Image'),
         actions: [
           IconButton(
             onPressed:

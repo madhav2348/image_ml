@@ -21,7 +21,7 @@ class PlaceList extends StatelessWidget {
             title: Text(
               places[index].title,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                color: Theme.of(context).colorScheme.onBackground,
+                color: Theme.of(context).colorScheme.surface,
               ),
             ),
             // subtitle: Text(
