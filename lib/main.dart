@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '/screen/place_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,7 +14,8 @@ final theme = ThemeData().copyWith(
   // textTheme:
 );
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const ProviderScope(child: MyApp()));
 }
 
