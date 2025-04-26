@@ -39,11 +39,6 @@ class _AddPlaceState extends ConsumerState<AddPlace> {
         padding: const EdgeInsets.all(12),
         child: Column(
           children: [
-            TextField(
-              decoration: const InputDecoration(label: Text('Title')),
-              controller: _titleController,
-              style: TextStyle(color: Theme.of(context).colorScheme.surface),
-            ),
             const SizedBox(height: 12),
             ImageInput(onPickImage: (image) => _selectImage = image),
             const SizedBox(height: 12),

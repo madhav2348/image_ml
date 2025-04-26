@@ -23,18 +23,7 @@ class _PlaceScreenState extends ConsumerState<PlaceScreen> {
   Widget build(BuildContext context) {
     final userPlace = ref.watch(placeProvider);
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Image'),
-        actions: [
-          IconButton(
-            onPressed:
-                () => Navigator.of(
-                  context,
-                ).push(MaterialPageRoute(builder: (ctx) => const AddPlace())),
-            icon: const Icon(Icons.add),
-          ),
-        ],
-      ),
+      appBar: AppBar(title: const Text('Image')),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: FutureBuilder(
@@ -44,6 +33,18 @@ class _PlaceScreenState extends ConsumerState<PlaceScreen> {
                   snapsot.connectionState == ConnectionState.waiting
                       ? const Center(child: CircularProgressIndicator())
                       : PlaceList(places: userPlace),
+        ),
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 80,
+        child: Center(
+          child: ElevatedButton(
+            onPressed:
+                () => Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (ctx) => const AddPlace())),
+            child: const Icon(Icons.add),
+          ),
         ),
       ),
     );
